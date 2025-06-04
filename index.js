@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
     password: String
 });
 
-const counter = 0;
+let counter = 0;
 
 app.get('/', async (_, res) => {
     counter++;
