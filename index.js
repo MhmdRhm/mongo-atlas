@@ -15,7 +15,7 @@ app.get('/', async (_, res) => {
     counter++;
     const User = mongoose.model('User', userSchema);
 
-    const mora = new User({username: "Mohammad", email: "Mhdmrh@gmail.com", password: "kljdalsfjlads"});
+    const mora = new User({username: "Mohammad " + counter, email: "Mhdmrh@gmail.com", password: "kljdalsfjlads"});
     await mora.save();
     res.send(`<h1 style="text-align: center">${mora.username}</h1>`);
 });
